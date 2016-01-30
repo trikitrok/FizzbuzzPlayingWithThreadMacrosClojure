@@ -22,5 +22,10 @@
     "It transforms multiples of 5 into Buzz"
     (fizzbuzz-for 5) => "Buzz"
     (fizzbuzz-for 10) => "Buzz"
-    (fizzbuzz-for 20) => "Buzz"))
+    (fizzbuzz-for 20) => "Buzz")
 
+  (fact
+    "It transforms multiples of 3 and 5 into FizzBuzz"
+    (fizzbuzz-for 15) => "FizzBuzz"
+    (fizzbuzz-for 30) => "FizzBuzz"
+    (fizzbuzz-for 45) => "FizzBuzz"))
