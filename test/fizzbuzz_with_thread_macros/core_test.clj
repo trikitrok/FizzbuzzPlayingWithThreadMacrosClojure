@@ -2,6 +2,9 @@
   (:require [midje.sweet :refer :all]
             [fizzbuzz-with-thread-macros.core :refer :all]))
 
+(defn- fizzbuzz-for [num]
+  (nth (fizzbuzz) (dec num)))
+
 (facts
   "About fizzbuzz"
   (fact
@@ -11,7 +14,7 @@
 
   (fact
     "It trasforms multiples of 3 into Fizz"
-    (nth (fizzbuzz) 2) => "Fizz"
-    (nth (fizzbuzz) 5) => "Fizz"
-    (nth (fizzbuzz) 8) => "Fizz"))
+    (fizzbuzz-for 3) => "Fizz"
+    (fizzbuzz-for 6) => "Fizz"
+    (fizzbuzz-for 9) => "Fizz"))
 
